@@ -1,0 +1,46 @@
+# 기공사의 불합리함
+def holy_gigongsa():
+    print("아드레날린이 들어있는 역천기공은 원기옥에 풀딜을 넣고 싶어요. 순보, 금강선공, 내공방출, 원기옥의 순서를 잘 조합해서 사용해 주세요. ")
+    ski = input("어떤 스킬부터 사용하시겠습니까? ")
+    wow = ("실패")
+    # sunbo_success
+    if ski == "순보":
+        ski2 = input("다음 스킬은? ")
+        if ski2 == "금강선공":
+            ski3 = input("금강선공 다음 스킬은? ")
+            if ski3 == "내공방출":
+                ski4 = input("내공방출 다음 스킬은?")
+                if ski4 == "원기옥":
+                    print("치명타가 안떴습니다.")
+                    return("재도전하세요.")
+
+                else:
+                    return("제대로 입력해주세요. 처음으로 돌아가겠습니다. ")
+
+
+            elif ski3 == "원기옥":
+                return("치명타가 안떴습니다. the end")
+            else:
+                print("틀렸습니다. 다시 실행해 주세요.")
+                return("다시 실행해주세요")    
+        elif ski2 == "원기옥":
+            print("치명타가 안떴습니다! the end")
+            return("다시 실행해주세요")
+        else:
+            print("틀렸습니다. 다시 실행해 주세요.")
+            return("다시 실행해주세요")
+    # sunbo_success_02
+    elif ski == "원기옥":
+        print("치명타가 안떴습니다~ the end")
+        return("다시 실행해주세요")
+    else:
+        print("틀렸습니다. 다시 실행해 주세요.")
+        return("다시 실행해주세요")
+    
+while True :
+    sval = input("시작하시겠습니까? 예/아니요 ")
+    if sval == "아니요":
+        print("멈추겠습니다.")
+        break
+    else:
+        print(holy_gigongsa())
